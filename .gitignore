@@ -75,6 +75,7 @@ include/linux/utsrelease.h
 include/linux/bounds.h
 include/generated
 usr/*
+scripts/*
 
 # stgit generated dirs
 patches-*

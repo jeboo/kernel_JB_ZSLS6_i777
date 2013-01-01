@@ -1,4 +1,5 @@
 #!/bin/bash
+export CROSS_COMPILE=/home/none/android/toolchains/android-toolchain-eabi/bin/arm-eabi-
 
 find -name '*.ko' -exec cp -av {} ../initramfs/lib/modules/ \;
 chmod 644 ../initramfs/lib/modules/*
