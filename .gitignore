@@ -49,12 +49,13 @@ makeall
 /Module.symvers
 /zImage
 /zImage_in
-/boot.img
+#/boot.img
 #
 # git files that we don't want to ignore even it they are dot-files
 #
 !.gitignore
 !.mailmap
+!recovery.cm10.tar.xz
 
 #
 # Generated include files
@@ -63,7 +64,11 @@ include/config
 include/linux/version.h
 include/generated/*
 arch/*/include/generated
-arch/arm/boot/*
+arch/arm/boot/Image
+arch/arm/boot/compressed/piggy.gzip
+arch/arm/boot/compressed/vmlinux
+usr/initramfs_data.cpio
+#arch/arm/boot/*
 zImage
 include/asm
 include/asm-arm
@@ -74,8 +79,7 @@ include/linux/version.h
 include/linux/utsrelease.h
 include/linux/bounds.h
 include/generated
-usr/*
-scripts/*
+#usr/*
 
 # stgit generated dirs
 patches-*
