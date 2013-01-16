@@ -6,6 +6,7 @@ find ../initramfs -name EMPTY_DIRECTORY -exec rm -rf {} \;
 find -name '*.ko' -exec cp -av {} ../initramfs/lib/modules/ \;
 chmod 644 ../initramfs/lib/modules/*
 ${CROSS_COMPILE}strip --strip-unneeded ../initramfs/lib/modules/*
+chmod g-w ../initramfs/*.rc ../initramfs/default.prop && \
 
 rm zImage
 make clean
