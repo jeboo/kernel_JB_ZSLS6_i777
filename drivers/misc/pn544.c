@@ -376,7 +376,7 @@ static int pn544_probe(struct i2c_client *client,
 		goto err_request_irq_failed;
 	}
 	pn544_disable_irq(pn544_dev);
-#if defined(CONFIG_TARGET_LOCALE_EUR_U1_NFC)
+#if defined(CONFIG_TARGET_LOCALE_EUR_U1_NFC) || defined(CONFIG_TARGET_LOCALE_NAATT_TEMP)
 	enable_irq_wake(client->irq);
 #endif
 	i2c_set_clientdata(client, pn544_dev);
